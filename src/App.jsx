@@ -1,3 +1,7 @@
+import React, { useState, useEffect } from 'react';
+import { Package, TrendingUp, Users, Plus, List, Trash2, Wallet, ShoppingCart, Info, Database, Layers, CheckCircle2, Clock, Smartphone, ArrowDownRight, ArrowUpRight, History } from 'lucide-react';
+import { SalesForm } from './components/SalesForm';
+import { BulkImport } from './components/BulkImport';
 import { calculateCostoPesos, calculateGananciaNeta, splitProfit } from './utils/calculations';
 import { supabase } from './supabase';
 import { migrateToCloud } from './utils/migration';
