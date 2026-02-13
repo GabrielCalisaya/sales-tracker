@@ -27,6 +27,16 @@ function App() {
     const [partners, setPartners] = useState({ a: 'SOCIO A', b: 'SOCIO B' });
     const [modelHistory, setModelHistory] = useState({});
     const [isLoading, setIsLoading] = useState(true);
+    const [showFundForm, setShowFundForm] = useState(false);
+    const [showForm, setShowForm] = useState(false);
+    const [showImport, setShowImport] = useState(false);
+    const [editingItem, setEditingItem] = useState(null);
+    const [showAuth, setShowAuth] = useState(false);
+    const [showConfirm, setShowConfirm] = useState(false);
+    const [showAlert, setShowAlert] = useState(false);
+    const [alertData, setAlertData] = useState({ title: '', message: '' });
+    const [confirmData, setConfirmData] = useState({ title: '', message: '', action: null });
+    const [authError, setAuthError] = useState('');
 
     // Initial Load & Migration
     useEffect(() => {
