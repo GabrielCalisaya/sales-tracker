@@ -462,7 +462,11 @@ function App() {
                             <div className="flex items-center justify-between mb-16 border-b border-white/10 pb-12">
                                 <div className="flex items-center gap-10">
                                     <List size={56} className="text-accent" />
-                                    <h2 className="font-display text-5xl md:text-7xl uppercase tracking-tighter italic leading-none">Detalle Tanda <span className="text-accent underline decoration-white/5 underline-offset-8">{currentTandaId}</span></h2>
+                                    <h2 className="font-display text-5xl md:text-7xl uppercase tracking-tighter italic leading-none">
+                                        Detalle <span className="text-accent underline decoration-white/5 underline-offset-8">
+                                            {tandas.find(t => t.id === currentTandaId)?.name || 'Seleccione Tanda'}
+                                        </span>
+                                    </h2>
                                 </div>
                                 {isAdmin && (
                                     <button
